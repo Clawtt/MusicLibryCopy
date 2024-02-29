@@ -8,6 +8,7 @@ import com.example.musiclibrycopy.commands.ArtistCommand;
 import com.example.musiclibrycopy.repositories.ArtistRep;
 import com.example.musiclibrycopy.repositories.PublisherRep;
 import com.example.musiclibrycopy.repositories.SongRep;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -17,7 +18,7 @@ public class DBLoader implements ApplicationListener<ContextRefreshedEvent> {
     private ArtistRep artistRep;
     private SongRep songRep;
     private PublisherRep publisherRep;
-
+    @Autowired
     public DBLoader(ArtistRep artistRep, SongRep songRep, PublisherRep publisherRep) {
         this.artistRep = artistRep;
         this.songRep = songRep;
@@ -55,5 +56,8 @@ public class DBLoader implements ApplicationListener<ContextRefreshedEvent> {
         artistRep.save(artist3);
         publisherRep.save(publisher3);
         songRep.save(song3);
+
+
     }
+
 }

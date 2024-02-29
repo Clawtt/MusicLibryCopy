@@ -8,8 +8,8 @@ import lombok.EqualsAndHashCode;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data //Anotacja z pakietu Lombok, który zastępuje boilerplate code (zwieksza widoczność)
-@EqualsAndHashCode(of = {"id"}) // ta adnotacja pozwala wybrać pole po którym ma porównywać metoda equals w encjach
+@Data //Anotacja z pakietu Lombok, który zastępuje boilerplate code
+@EqualsAndHashCode(of = {"id"})
 @Entity
 public class Artist {
 

@@ -20,7 +20,10 @@
         <td th:text="${artist.getLastName()}">123</td>>
         <td th:text="${artist.getNick()}">123</td>>
         <td>
-            <a href="#" th:href="@{'/artist/new'}" role="button" class="btn btn-success">Add</a>
+            <a href="#" th:href="@{'/artist/new'}" role="button" class="btn btn-success" th:marginwidth="5px">Add</a>
+            <a href="#" th:href="@{'/artist/'+ ${artist.id} + '/edit'}" role="button" class="btn btn-success">Edit</a>
+            <a href="#" th:href="@{'/artist/'+ ${artist.id} + '/show'}" role="button" class="btn btn-success">Show</a>
+            <a href="#" th:href="@{'/artist/'+ ${artist.id}}" role="button" class="btn btn-success">Delete</a>
         </td>>
     </tr>>
 </table>>
